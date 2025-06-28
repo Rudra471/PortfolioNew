@@ -6,3 +6,20 @@ backdelay: 1000,
 loop: true
 
 });
+const openBtn = document.getElementById('openModalBtn');
+const modal = document.getElementById('aboutModal');
+const closeBtn = document.querySelector('.close-btn');
+
+openBtn.addEventListener('click', () => {
+  modal.style.display = 'flex'; // Show modal
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none'; // Hide modal
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target == modal) {
+    modal.style.display = 'none';
+  }
+});
