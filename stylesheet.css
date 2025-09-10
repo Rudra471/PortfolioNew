@@ -1231,10 +1231,10 @@ section.skill {
 }
 
 .container1 {
-  flex: 1 1 500px;
-  min-width: 450px;
-  max-width: 600px;
-  padding: 50px 40px;
+  flex: 1 1 400px;
+  min-width: 350px;
+  max-width: 480px;
+  padding: 40px 30px;
   background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(10px);
   border-radius: 25px;
@@ -1242,6 +1242,12 @@ section.skill {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
   transition: all 0.3s ease;
+}
+
+/* Increase height for Professional Skills container */
+.container1.professional-skills {
+  min-height: 600px;
+  padding: 40px 30px 60px;
 }
 
 .container1:hover {
@@ -1409,24 +1415,26 @@ section.skill {
 .radial-bars {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 25px 30px;
   justify-items: center;
   align-items: center;
+  padding: 20px 0;
 }
 
 .radial-bars .radial-bar {
-  width: 50%;
-  height: 170px;
-  margin-bottom: 10px;
+  width: 100%;
+  height: 180px;
+  margin-bottom: 15px;
   position: relative;
+  max-width: 200px;
 }
 .radial-bars .radial-bar svg {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-90deg);
-  width: 120px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
 }
 .radial-bars .radial-bar .progress-bar {
   stroke-width: 10;
@@ -1487,6 +1495,19 @@ section.skill {
 .path-4 {
   animation: animate-path4 1s 1s linear forwards;
 }
+.path-5 {
+  animation: animate-path5 1s 1s linear forwards;
+}
+.path-6 {
+  animation: animate-path6 1s 1s linear forwards;
+}
+.path-7 {
+  animation: animate-path7 1s 1s linear forwards;
+}
+.path-8 {
+  animation: animate-path8 1s 1s linear forwards;
+}
+
 @keyframes animate-path1 {
   100% {
       stroke-dashoffset: 50.2; 
@@ -1499,12 +1520,32 @@ section.skill {
 }
 @keyframes animate-path3 {
   100% {
-      stroke-dashoffset: 125.5; 
+      stroke-dashoffset: 175.7; 
   }
 }
 @keyframes animate-path4 {
   100% {
-      stroke-dashoffset: 75.3; 
+      stroke-dashoffset: 55.2; 
+  }
+}
+@keyframes animate-path5 {
+  100% {
+      stroke-dashoffset: 75.3; /* 85% */
+  }
+}
+@keyframes animate-path6 {
+  100% {
+      stroke-dashoffset: 100.4; /* 80% */
+  }
+}
+@keyframes animate-path7 {
+  100% {
+      stroke-dashoffset: 40.2; /* 92% */
+  }
+}
+@keyframes animate-path8 {
+  100% {
+      stroke-dashoffset: 60.2; /* 88% */
   }
 }
 
@@ -2161,6 +2202,25 @@ section {
   .container1 {
     min-width: auto;
     width: 100%;
+  }
+  
+  .container1.professional-skills {
+    min-height: 500px;
+    padding: 30px 20px 40px;
+  }
+  
+  .radial-bars {
+    gap: 15px 20px;
+  }
+  
+  .radial-bars .radial-bar {
+    height: 150px;
+    max-width: 160px;
+  }
+  
+  .radial-bars .radial-bar svg {
+    width: 120px;
+    height: 120px;
   }
   
   .contact {
