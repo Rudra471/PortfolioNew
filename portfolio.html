@@ -42,33 +42,84 @@
         </div>
     </header>
 <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello, It's me</h3>
-            <h1>Rudra Pratap Chauhan</h1>
-            <h3>And I'm a <span class="text"></span></h3>
-            <p>I'm currently pursuing Biomedical Engineering at NIT Rourkela with a minor in Computer Science. I'm passionate about creating innovative solutions, always exploring new technologies, and pushing my limits. Beyond coding, I enjoy speedcubing, photography, and tackling challenges that make me think differently.</p>
-<div class="home-sci">
-                <a href="https://github.com/rudrapratap" target="_blank" rel="noopener" style="--i:7" aria-label="GitHub">
-                    <i class='bx bxl-github'></i>
-                </a>
-                <a href="https://linkedin.com/in/rudrapratap" target="_blank" rel="noopener" style="--i:8" aria-label="LinkedIn">
-                    <i class='bx bxl-linkedin' ></i>
-                </a>
-                <a href="https://instagram.com/rudrapratap" target="_blank" rel="noopener" style="--i:9" aria-label="Instagram">
-                    <i class='bx bxl-instagram' ></i>
-                </a>
-                <a href="mailto:chrudra@gmail.com" style="--i:10" aria-label="Email">
-                    <i class='bx bx-envelope' ></i>
-                </a>
-            </div>
-            <div class="home-buttons">
-                <a href="#about" class="btn-box primary">More About Me</a>
-                <button class="btn-box secondary" onclick="downloadResume()">
-                    <i class='bx bx-download'></i> Download CV
-                </button>
+        <div class="bg-animation">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="particle-field">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
             </div>
         </div>
-        <span class="home-imgHover"></span>
+        
+        <div class="hero-container">
+            <div class="hero-badge">
+                <span class="status-dot"></span>
+                Available for opportunities
+            </div>
+            
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">Hi, I'm</span>
+                    <span class="title-name">Rudra Pratap Chauhan</span>
+                    <span class="title-role">I craft <span class="dynamic-text"></span></span>
+                </h1>
+                
+                <p class="hero-description">
+                    Biomedical Engineering student at NIT Rourkela with a passion for frontend development. 
+                    I transform ideas into interactive digital experiences using modern web technologies.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Projects Built</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">8+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">
+                        <span>Let's Connect</span>
+                        <i class='bx bx-right-arrow-alt'></i>
+                    </button>
+                    <button class="btn-secondary" onclick="downloadResume()">
+                        <i class='bx bx-download'></i>
+                        <span>Download Resume</span>
+                    </button>
+                </div>
+                
+                <div class="hero-social">
+                    <a href="https://github.com/rudrapratap" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://linkedin.com/in/rudrapratap" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://instagram.com/rudrapratap" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="mailto:chrudra@gmail.com" aria-label="Email" class="social-link">
+                        <i class='bx bx-envelope'></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <span class="scroll-text">Scroll to explore</span>
+            </div> -->
+        </div>
     </section>
 
 
@@ -78,60 +129,157 @@
         </div>
         <div class="about-text">
             <h2> About <span>Me</span></h2>
-            <p>Currently, I'm the sophomore in Biomedical Engineering with minor in Computer Science Engineering in National Institute of Technology, Rourkela.
-            In my minor degree I have completed the course of Data Structures and Algorithm. I am also a passionate frontend developer with expertise in HTML, CSS, and JavaScript. With a strong foundation in C++ programming and problem-solving, I love creating interactive and user-friendly web experiences. My ultimate goal is to secure a good placement in a reputed tech company where I can contribute and grow as a developer.
-
-            </p>
+            <p>I'm a sophomore pursuing Biomedical Engineering with a minor in Computer Science at the National Institute of Technology, Rourkela. My academic journey has equipped me with knowledge in Data Structures and Algorithms, while my passion lies in frontend development.</p>
+            
+            <p>I specialize in creating interactive and user-friendly web experiences using modern technologies like HTML5, CSS3, JavaScript, and React. My strong foundation in C++ and problem-solving helps me approach complex challenges with innovative solutions.</p>
+            
+            <p>I'm driven by the intersection of technology and creativity, constantly exploring new ways to bring ideas to life through code. My goal is to contribute to impactful projects while growing as a developer in the tech industry.</p>
             <!-- More About Me Button -->
 <button id="openModalBtn">More About Me</button>
 
 <!-- Modal Panel -->
 <div id="aboutModal" class="modal">
   <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <section>
-        <h3>👋 Hi, I'm Rudra Pratap Chauhan</h3>
+    <span class="close-btn" aria-label="Close">&times;</span>
 
-        <p>
-          Here are some more about me.
-        </p>
-      </section>
-    
-      <section>
-        <section>
-            <h3>🎓 Education</h3>
-            <ul>
-              <li>
-                <strong>High School (10th)</strong> – Heritage Public School, Trans Yamuna Colony, Agra UP 282006  <br>
-                Year: 2020 | Board: CBSE
-              </li>
-              <li>
-                <strong>Intermediate (12th)</strong> – Baluni Public School, Dayalbhag, Agra UP 282005 <br>
-                Year: 2022 | Stream: Science
-              </li>
-              <li>
-                <strong>B.Tech in Biomedical Engineering , Minor in Computer Science Engineering </strong><br>
-                National Institute of Technology Rourkela, Rourkela, Odisha – 2023 to 2027
-              </li>
+    <header class="modal-header">
+      <h2 class="modal-title">More About Me</h2>
+      <p class="modal-subtitle">Quick overview of my background, interests, and achievements</p>
+    </header>
+
+    <div class="modal-grid">
+      <!-- Left column: Experience, Skills, and Quick Facts -->
+      <div class="modal-column">
+        <div class="modal-card">
+          <h3>Experience & Projects</h3>
+          <div class="experience-item">
+            <h4>Frontend Development Projects</h4>
+            <p class="duration">2023 - Present</p>
+            <ul class="experience-list">
+              <li>Built responsive web applications using HTML5, CSS3, JavaScript</li>
+              <li>Developed interactive portfolio with modern UI/UX principles</li>
+              <li>Implemented dynamic animations and smooth user experiences</li>
             </ul>
-          </section>
-      </section>
-    
-      <section>
-        <h3>📜 Certifications</h3>
-        <ul>
-          <li>Python for Data Science – IBM</li>
-          <li>Machine Learning with Python – Coursera</li>
-          <li>Introduction to Embedded Systems – NPTEL</li>
-        </ul>
-      </section>
-    
-      <section>
-        <h3>🛠️ Skills</h3>
-        <p>
-          Embedded C, Arduino, Python, Machine Learning, IoT Protocols (MQTT), Circuit Design, PCB Layout, MATLAB, Communication Systems, HTML/CSS, JavaScript.
-        </p>
-      </section>
+          </div>
+          <!-- ADD YOUR ACTUAL EXPERIENCE/INTERNSHIPS HERE -->
+          <div class="experience-item">
+            <h4>[Add Your Experience/Internship Title]</h4>
+            <p class="duration">[Duration]</p>
+            <ul class="experience-list">
+              <li>[Achievement/Responsibility 1]</li>
+              <li>[Achievement/Responsibility 2]</li>
+              <li>[Achievement/Responsibility 3]</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-card">
+          <h3>Technical Skills</h3>
+          <div class="skills-category">
+            <h4>Frontend Development</h4>
+            <div class="chip-list">
+              <span class="chip">HTML5</span>
+              <span class="chip">CSS3</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">React</span>
+              <span class="chip">Bootstrap</span>
+            </div>
+          </div>
+          <div class="skills-category">
+            <h4>Programming Languages</h4>
+            <div class="chip-list">
+              <span class="chip">Python</span>
+              <span class="chip">C++</span>
+              <span class="chip">Java</span>
+              <span class="chip">MATLAB</span>
+            </div>
+          </div>
+          <div class="skills-category">
+            <h4>Other Technologies</h4>
+            <div class="chip-list">
+              <span class="chip">Git</span>
+              <span class="chip">Arduino</span>
+              <span class="chip">IoT</span>
+              <span class="chip">DSA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column: Education, Certifications, and Achievements -->
+      <div class="modal-column">
+        <div class="modal-card">
+          <h3>Education</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>B.Tech · Biomedical Engineering (Minor: CSE)</h4>
+                <p>National Institute of Technology Rourkela · 2023–2027</p>
+                <p class="gpa">CGPA: [Add your CGPA] | Relevant Coursework: DSA, Web Development</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>Intermediate (12th)</h4>
+                <p>Baluni Public School, Dayalbhag, Agra · 2022 · Science</p>
+                <p class="gpa">Percentage: [Add your %] | Stream: PCM with Computer Science</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>High School (10th)</h4>
+                <p>Heritage Public School, Agra · 2020 · CBSE</p>
+                <p class="gpa">Percentage: [Add your %]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-card">
+          <h3>Certifications & Courses</h3>
+          <ul class="list-clean">
+            <li><i class='bx bx-badge-check'></i> Python for Data Science – IBM</li>
+            <li><i class='bx bx-badge-check'></i> Machine Learning with Python – Coursera</li>
+            <li><i class='bx bx-badge-check'></i> Introduction to Embedded Systems – NPTEL</li>
+            <!-- ADD YOUR ADDITIONAL CERTIFICATIONS HERE -->
+            <li><i class='bx bx-badge-check'></i> [Add more certifications from your resume]</li>
+          </ul>
+        </div>
+
+        <div class="modal-card">
+          <h3>Achievements & Activities</h3>
+          <ul class="achievements-list">
+            <!-- ADD YOUR ACTUAL ACHIEVEMENTS HERE -->
+            <li><i class='bx bx-trophy'></i> [Add competition wins, hackathons, etc.]</li>
+            <li><i class='bx bx-group'></i> [Add leadership roles, clubs, societies]</li>
+            <li><i class='bx bx-star'></i> [Add academic achievements, scholarships]</li>
+            <li><i class='bx bx-medal'></i> [Add any other notable accomplishments]</li>
+          </ul>
+        </div>
+
+        <!-- <div class="modal-card">
+          <h3>Contact & Links</h3>
+          <div class="contact-links">
+            <a href="mailto:chrudra@gmail.com" class="contact-link">
+              <i class='bx bx-envelope'></i> chrudra@gmail.com
+            </a>
+            <a href="tel:+919319018800" class="contact-link">
+              <i class='bx bx-phone'></i> +91 9319018800
+            </a>
+            <a href="https://linkedin.com/in/rudrapratap" target="_blank" class="contact-link">
+              <i class='bx bxl-linkedin'></i> LinkedIn Profile
+            </a>
+            <a href="https://github.com/rudrapratap" target="_blank" class="contact-link">
+              <i class='bx bxl-github'></i> GitHub Profile
+            </a>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
   </div>
 </div>
         </div>
@@ -226,8 +374,9 @@
     </section>
     <section class="skill" id="skill">
         <h1 class="sub-title"> My <span>Skills</span></h1>
-        <div class="container1" id="skills">
-            <h1 class="heading1"> Technical Skills</h1>
+        <div class="skills-wrapper">
+            <div class="container1" id="skills">
+                <h1 class="heading1"> Technical Skills</h1>
             <div class="Technical-bars">
                 <div class="bar"><i class='bx bxl-html5' style='color:#c95d2e' ></i>
                     <div class="info">
@@ -269,70 +418,108 @@
                         <span></span>
                     </div>
                 </div>
+                <div class="bar"><i class='bx bxl-python' style='color:#3776AB' ></i>
+                    <div class="info">
+                        <span>Python</span>
+                    </div>
+                    <div class="progress-line python">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bxl-c-plus-plus' style='color:#00599C' ></i>
+                    <div class="info">
+                        <span>C++</span>
+                    </div>
+                    <div class="progress-line cpp">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bx-data' style='color:#00B894' ></i>
+                    <div class="info">
+                        <span>DSA</span>
+                    </div>
+                    <div class="progress-line dsa">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="container1">
+                <h1 class="heading1"> Professional Skills </h1>
+                <div class="radial-bars">
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progess-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">90%</div>
+                        <div class="text">Creativity</div>
+                    </div>
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progess-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">65%</div>
+                        <div class="text">Communication</div>
+                    </div>
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progess-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">65%</div>
+                        <div class="text">Problem Solving</div>
+                    </div>
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progess-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">89%</div>
+                        <div class="text">Team Work</div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="container1">
-            <h1 class="heading1"> Professional Skills </h1>
-            <div class="radial-bars">
-                <div class="radial-bar">
-                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                        <circle class="progess-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">90%</div>
-                    <div class="text">Creativity</div>
-                </div>
-                <div class="radial-bar">
-                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                        <circle class="progess-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-2" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">65%</div>
-                    <div class="text">Communication</div>
-                </div>
-                <div class="radial-bar">
-                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                        <circle class="progess-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-3" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">65%</div>
-                    <div class="text">Problem Solving</div>
-                </div>
-                <div class="radial-bar">
-                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                        <circle class="progess-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-4" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">89%</div>
-                    <div class="text">Team Work</div>
-                </div>
-            </div>
-            
     </section>
     <section class="contact" id="contact">
         <div class="contact_text">
-            <h2>Contact <span> Me </span></h2> 
-            <h4> Let's Work Together </h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quasi deserunt quisquam ipsam qui blanditiis repellat necessitatibus eius similique non?</p>
+            <h2>Get In <span>Touch</span></h2> 
+            <h4>Let's Create Something Amazing Together</h4>
+            <p>I'm always open to discussing new opportunities, collaborating on exciting projects, or just having a chat about technology and innovation. Feel free to reach out!</p>
             <div class="contact_list">
-                <li><i class='bx bxs-send' style='color:#00eeff' ></i>chrudra@gmail.com</li>
-                <li><i class='bx bxs-phone' style='color:#00eeff' ></i></i>+91 9319018800</li>
+                <ul>
+                    <li><i class='bx bxs-send' style='color:#00eeff'></i> chrudra@gmail.com</li>
+                    <li><i class='bx bxs-phone' style='color:#00eeff'></i> +91 9319018800</li>
+                    <li><i class='bx bxs-location-plus' style='color:#00eeff'></i> NIT Rourkela, Odisha</li>
+                </ul>
             </div>
             <div class="contact_icons">
-                <a href="#"><i class='bx bxl-facebook-circle' style='color:#00eeff' ></i></a>
-                <a href="#"><i class='bx bxl-twitter' style='color:#00eeff'></i></a>
-                <a href="#"><i class='bx bxl-instagram' style='color:#00eeff' ></i></a>
-                <a href="#"><i class='bx bxl-linkedin' style='color:#00eeff' ></i></a>
+                <a href="https://github.com/rudrapratap" target="_blank" aria-label="GitHub"><i class='bx bxl-github' style='color:#00eeff'></i></a>
+                <a href="https://linkedin.com/in/rudrapratap" target="_blank" aria-label="LinkedIn"><i class='bx bxl-linkedin' style='color:#00eeff'></i></a>
+                <a href="https://instagram.com/rudrapratap" target="_blank" aria-label="Instagram"><i class='bx bxl-instagram' style='color:#00eeff'></i></a>
+                <a href="mailto:chrudra@gmail.com" aria-label="Email"><i class='bx bx-envelope' style='color:#00eeff'></i></a>
             </div>
         </div>
         <div class="contact_form">
-            <form action="">
-                <input type="name" placeholder="Enter your name" required>
-                <input type="email" placeholder="Enter your email" required>
-                <input type="" placeholder="Enter your subject" required>
-
-                <textarea name="" id="" cols="40" rows="10" placeholder="Enter your message" required></textarea>
-                <input type="submit" value="submit" class="send">
+            <form action="" class="modern-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="8" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="send-btn">
+                    <span>Send Message</span>
+                    <i class='bx bx-send'></i>
+                </button>
             </form>
         </div>
        

@@ -30,19 +30,21 @@ window.addEventListener('load', () => {
   }, 2000);
 });
 
-// Typed.js Animation
+// Typed.js Animation for dynamic text
 let typed;
 document.addEventListener('DOMContentLoaded', () => {
-  typed = new Typed(".text", {
-      strings: ["Frontend Developer", "Biomedical Engineer", "Problem Solver", "Tech Enthusiast"],
-      typeSpeed: 80,
-      backSpeed: 60,
-      backDelay: 1000,
-      startDelay: 500,
-      loop: true,
-      showCursor: true,
-      cursorChar: '|'
-  });
+  const dynamicTextElement = document.querySelector(".dynamic-text");
+  if (dynamicTextElement) {
+    typed = new Typed(".dynamic-text", {
+        strings: ["digital experiences", "web applications", "user interfaces", "innovative solutions"],
+        typeSpeed: 80,
+        backSpeed: 60,
+        backDelay: 1200,
+        startDelay: 1000,
+        loop: true,
+        showCursor: false
+    });
+  }
 });
 
 // Modal Functionality
@@ -54,7 +56,8 @@ if (openBtn && modal && closeBtn) {
   openBtn.addEventListener('click', (e) => {
       e.preventDefault();
       modal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
+      modal.classList.add('active');
+      // Do not block page scrolling or interactions
       modal.setAttribute('aria-hidden', 'false');
   });
 
@@ -77,8 +80,8 @@ if (openBtn && modal && closeBtn) {
 }
 
 function closeModal() {
+  modal.classList.remove('active');
   modal.style.display = 'none';
-  document.body.style.overflow = 'auto';
   modal.setAttribute('aria-hidden', 'true');
 }
 
@@ -239,26 +242,32 @@ function showNotification(message, type = 'info') {
 
 // Download Resume Function
 function downloadResume() {
-  // Use actual resume file path
-  const resumeUrl = './123Bm0745_resume__.pdf';
-  const link = document.createElement('a');
-  link.href = resumeUrl;
-  link.download = 'Rudra_Pratap_Chauhan_Resume.pdf';
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-  showNotification('Resume download started!', 'success');
+  // Update this path to match your uploaded resume file name
+  // Examples: './resume.pdf', './Rudra_Resume_2024.pdf', './CV_Rudra.pdf'
+  const resumeUrl = './123Bm0745_resume__.pdf'; // Change this to match your actual file name
+  
+  try {
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'Rudra_Pratap_Chauhan_Resume.pdf';
+    link.target = '_blank'; // Open in new tab as fallback
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    showNotification('Resume download started!', 'success');
+  } catch (error) {
+    console.error('Resume download failed:', error);
+    showNotification('Resume download failed. Please try again or contact me directly.', 'error');
+    // Fallback: try to open in new tab
+    window.open(resumeUrl, '_blank');
+  }
 }
 
 // Skill Progress Animation
 function animateSkillBars() {
-  const skillBars = document.querySelectorAll('.progress-line span');
-  skillBars.forEach(bar => {
-      const width = bar.style.width || bar.getAttribute('data-width');
-      bar.style.width = '0%';
-      setTimeout(() => {
-          bar.style.width = width;
-      }, 500);
+  const progressLines = document.querySelectorAll('.progress-line');
+  progressLines.forEach(line => {
+      line.classList.add('animate');
   });
 }
 
