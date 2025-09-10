@@ -3,37 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Personal Portfolio - Rudra Pratap Chauhan</title>
+    <meta name="description" content="Portfolio of Rudra Pratap Chauhan - Frontend Developer & Biomedical Engineering Student at NIT Rourkela">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://unpkg.com/boxicons@2.1.9/css/boxicons.min.css" rel="stylesheet">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo"> Portfolio </a>
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <h2>Loading Portfolio...</h2>
+        </div>
+    </div>
+
+<header class="header">
+        <a href="#home" class="logo"> Portfolio </a>
         <nav class="navbar">
             <a href="#home" style="--i:1" class="active"> Home </a>
             <a href="#about" style="--i:2"> About </a>
             <a href="#skill" style="--i:3"> Skills </a>
-            <a href="#ser" style="--i:4"> Project </a>
+            <a href="#ser" style="--i:4"> Projects </a>
             <a href="#contact" style="--i:5"> Contact </a>
         </nav>
+        <div class="header-actions">
+            <button class="btn-resume" onclick="downloadResume()">
+                <i class='bx bx-download'></i> Resume
+            </button>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
-    <section class="home">
+<section class="home" id="home">
         <div class="home-content">
-            <h3>Hello It's me</h3>
+            <h3>Hello, It's me</h3>
             <h1>Rudra Pratap Chauhan</h1>
             <h3>And I'm a <span class="text"></span></h3>
-            <p>I'm currently at NIT Rourkela, always exploring new tech and pushing my limits. Beyond coding, I'm into speedcubing, photography, and anything that challenges me to think differently.</p>
-            <div class="home-sci">
-                <a href="#" style="--i:7"><i class='bx bxl-facebook'></i></a>
-                <a href="#" style="--i:8"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" style="--i:9"><i class='bx bxl-whatsapp' ></i></a>
-                <a href="#" style="--i:10"><i class='bx bxl-linkedin' ></i></a>
-
+            <p>I'm currently pursuing Biomedical Engineering at NIT Rourkela with a minor in Computer Science. I'm passionate about creating innovative solutions, always exploring new technologies, and pushing my limits. Beyond coding, I enjoy speedcubing, photography, and tackling challenges that make me think differently.</p>
+<div class="home-sci">
+                <a href="https://github.com/rudrapratap" target="_blank" rel="noopener" style="--i:7" aria-label="GitHub">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="https://linkedin.com/in/rudrapratap" target="_blank" rel="noopener" style="--i:8" aria-label="LinkedIn">
+                    <i class='bx bxl-linkedin' ></i>
+                </a>
+                <a href="https://instagram.com/rudrapratap" target="_blank" rel="noopener" style="--i:9" aria-label="Instagram">
+                    <i class='bx bxl-instagram' ></i>
+                </a>
+                <a href="mailto:chrudra@gmail.com" style="--i:10" aria-label="Email">
+                    <i class='bx bx-envelope' ></i>
+                </a>
             </div>
-            <a href="#about" class="btn-box" style="margin-top: 20px;">More About Me</a>
+            <div class="home-buttons">
+                <a href="#about" class="btn-box primary">More About Me</a>
+                <button class="btn-box secondary" onclick="downloadResume()">
+                    <i class='bx bx-download'></i> Download CV
+                </button>
+            </div>
         </div>
         <span class="home-imgHover"></span>
     </section>
@@ -103,62 +136,96 @@
 </div>
         </div>
     </section>
-    <section class="ser">
+<section class="ser" id="ser">
         <div class="service" id="service">
             <div class="container">
                 <h1 class="sub-title"> My <span>Work</span></h1>
                 <div class="service-list">
-                    <div class="project-panel">
+<div class="project-panel">
                         <div class="project-front">
                             <i class='bx bx-code' style='color:#00eeff'></i>
                           <h2>Smart E-Scooter</h2>
                           <p>IoT-enabled smart vehicle</p>
-                          <!-- <a href="#" class="read">Learn More</a> -->
+                          <div class="tech-stack">
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">Arduino</span>
+                            <span class="tech-tag">GPS</span>
+                          </div>
                         </div>
                         <div class="project-detail">
                           <h2>Smart E-Scooter</h2>
                           <p>
                             IoT-enabled e-scooter with GPS tracking, battery management system, real-time sensors, and mobile app for booking, unlocking, and remote control.
                           </p>
-                          
+                          <div class="project-actions">
+                            <a href="#" class="btn-project" target="_blank">
+                                <i class='bx bx-link-external'></i> Live Demo
+                            </a>
+                            <a href="#" class="btn-project" target="_blank">
+                                <i class='bx bxl-github'></i> GitHub
+                            </a>
+                          </div>
                         </div>
                       </div>
-                      <div class="project-panel">
+<div class="project-panel">
                         <div class="project-front">
-                          <i class='bx bx-code' style='color:#00eeff'></i>
+                          <i class='bx bx-brain' style='color:#00eeff'></i>
                           <h2>AI Animation Generator</h2>
-                          <p>Voice-controlled real-time animations.</p>
-                          <!-- <a href="#" class="read">Learn More</a> -->
+                          <p>Voice-controlled real-time animations</p>
+                          <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">AI</span>
+                          </div>
                         </div>
                         <div class="project-detail">
                           <h2>AI Animation Generator</h2>
                           <p>
-                            AI system using Python and Unity to generate animations from voice via NLP and speech recognition.
+                            AI system using Python and Unity to generate animations from voice via NLP and speech recognition. Features real-time voice processing and dynamic animation rendering.
                           </p>
-                          
+                          <div class="project-actions">
+                            <a href="#" class="btn-project" target="_blank">
+                                <i class='bx bx-link-external'></i> Live Demo
+                            </a>
+                            <a href="#" class="btn-project" target="_blank">
+                                <i class='bx bxl-github'></i> GitHub
+                            </a>
+                          </div>
                         </div>
                       </div>
-                      <div class="project-panel">
+<div class="project-panel">
                         <div class="project-front">
-                          <i class='bx bx-code' style='color:#00eeff'></i>
-                          <h2>Smart E-Scooter</h2>
-                          <p>IoT-enabled smart vehicle</p>
-                          <!-- <a href="#" class="read">Learn More</a> -->
+                          <i class='bx bx-globe' style='color:#00eeff'></i>
+                          <h2>Portfolio Website</h2>
+                          <p>Modern responsive portfolio</p>
+                          <div class="tech-stack">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                          </div>
                         </div>
                         <div class="project-detail">
-                          <h2>Smart E-Scooter</h2>
+                          <h2>Portfolio Website</h2>
                           <p>
-                            IoT-enabled e-scooter with GPS tracking, battery management system, real-time sensors, and mobile app for booking, unlocking, and remote control.
+                            Modern, responsive portfolio website built with HTML5, CSS3, and JavaScript. Features smooth animations, glassmorphism design, and professional user experience.
                           </p>
-                         
+                          <div class="project-actions">
+                            <a href="#" class="btn-project" target="_blank">
+                                <i class='bx bx-link-external'></i> Live Demo
+                            </a>
+                            <a href="#" class="btn-project" target="_blank">
+                                <i class='bx bxl-github'></i> GitHub
+                            </a>
+                          </div>
                         </div>
                       </div>
                 </div>
             </div>
         </div>
     </section>
-    <h1 class="sub-title"> My <span>Skills</span></h1>
     <section class="skill" id="skill">
+        <h1 class="sub-title"> My <span>Skills</span></h1>
         <div class="container1" id="skills">
             <h1 class="heading1"> Technical Skills</h1>
             <div class="Technical-bars">
@@ -271,11 +338,58 @@
        
     </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Rudra Pratap Chauhan</h3>
+                <p>Frontend Developer & Biomedical Engineering Student</p>
+                <div class="footer-social">
+                    <a href="https://github.com/rudrapratap" target="_blank" aria-label="GitHub">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://linkedin.com/in/rudrapratap" target="_blank" aria-label="LinkedIn">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://instagram.com/rudrapratap" target="_blank" aria-label="Instagram">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="mailto:chrudra@gmail.com" aria-label="Email">
+                        <i class='bx bx-envelope'></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#ser">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <div class="contact-info">
+                    <p><i class='bx bx-envelope'></i> chrudra@gmail.com</p>
+                    <p><i class='bx bx-phone'></i> +91 9319018800</p>
+                    <p><i class='bx bx-location-plus'></i> NIT Rourkela, Odisha</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Rudra Pratap Chauhan. All rights reserved. | Built with ❤️ using HTML, CSS & JavaScript</p>
+        </div>
+    </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
 
-
-
-
+    <!-- Notification Container -->
+    <div class="notification-container"></div>
 
     <script src="main.js"></script>
 </body>
